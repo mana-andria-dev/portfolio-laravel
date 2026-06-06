@@ -3,111 +3,381 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Développeur Full Stack Laravel | Portfolio</title>
+    <meta name="description" content="Portfolio de Mananjara Andriamarolaza - Développeur Full Stack Senior avec 7 ans d'expérience - Laravel, Vue.js, React, Node.js, Magento">
+    <title>Mananjara Andriamarolaza | Développeur Full Stack Senior</title>
     <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body>
-    <header>
-        <nav>
-            <div class="logo">Mana Andria</div>
-            <ul>
-                <li><a href="#expertise">Expertise</a></li>
-                <li><a href="#projets">Projets Laravel</a></li>
-                <li><a href="#performance">Performance</a></li>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="#">MA</a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#accueil">Accueil</a></li>
+                <li><a href="#experiences">Expériences</a></li>
+                <li><a href="#competences">Compétences</a></li>
+                <li><a href="#formations">Formations</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
-        </nav>
-    </header>
+            <div class="nav-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </nav>
 
-    <main>
-        <section class="hero">
-            <h1>Développeur Full Stack Senior</h1>
-            <p class="stack">Laravel · MySQL · Linux/Nginx · Stripe</p>
-            <p class="xp">5+ ans d'expérience en production sur plateformes à fort trafic</p>
-            <a href="#contact" class="cta-button">Postuler à l'offre</a>
-        </section>
-
-        <section id="expertise">
-            <h2>✅ Compétences exactes pour l'offre e-learning</h2>
-            <div class="skills-grid">
-                <div class="skill-card">
-                    <h3>Laravel / PHP</h3>
-                    <p>Expertise 5+ ans, projets en production massive</p>
+    <!-- Hero Section -->
+    <section id="accueil" class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <div class="hero-badge">
+                    <span class="badge">Disponible</span>
                 </div>
-                <div class="skill-card">
-                    <h3>MySQL & JSON fields</h3>
-                    <p>Requêtes complexes, optimisation, EXPLAIN, index</p>
+                <h1 class="hero-title">
+                    Mananjara <span class="highlight">Andriamarolaza</span>
+                </h1>
+                <h2 class="hero-subtitle">Développeur Full Stack Senior | 7 ans d'expérience</h2>
+                <p class="hero-description">
+                    Lead développeur full stack, autonome et autodidacte. Spécialisé dans les frameworks PHP (Laravel, Symfony, CodeIgniter), 
+                    JavaScript (React, Node.js, Vue.js) et e-commerce (Magento 2, WordPress, PrestaShop).
+                </p>
+                <div class="hero-buttons">
+                    <a href="#contact" class="btn btn-primary">
+                        <i class="fas fa-paper-plane"></i> Me contacter
+                    </a>
+                    <a href="#experiences" class="btn btn-secondary">
+                        <i class="fas fa-chevron-down"></i> Voir mon parcours
+                    </a>
                 </div>
-                <div class="skill-card">
-                    <h3>Linux / Nginx</h3>
-                    <p>SSH, cron, déploiement, configuration serveur</p>
-                </div>
-                <div class="skill-card">
-                    <h3>Stripe & Webhooks</h3>
-                    <p>Paiements, abonnements, webhooks idempotents</p>
-                </div>
-                <div class="skill-card">
-                    <h3>Performance</h3>
-                    <p>Score PageSpeed 95+, cache Redis, lazy loading</p>
+                <div class="hero-stats">
+                    <div class="stat">
+                        <span class="stat-number">7+</span>
+                        <span class="stat-label">Années d'expérience</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">20+</span>
+                        <span class="stat-label">Projets livrés</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">100%</span>
+                        <span class="stat-label">Remote</span>
+                    </div>
                 </div>
             </div>
-        </section>
-
-        <section id="projets">
-            <h2>🚀 Projets Laravel en production</h2>
-            
-            <div class="project">
-                <h3>Plateforme E-learning (clone technique)</h3>
-                <p><strong>Stack :</strong> Laravel, MySQL, Stripe</p>
-                <ul>
-                    <li>Système de paiement Stripe avec webhooks</li>
-                    <li>Dashboard admin avec stats temps réel</li>
-                    <li>Optimisation : 200ms → temps de réponse après cache</li>
-                </ul>
-                <div class="project-links">
-                    <a href="#">🔗 Voir le front (Netlify)</a>
-                    <a href="#">🐙 Code source</a>
-                    <a href="#">📊 Rapport performance</a>
+            <div class="hero-image">
+                <div class="profile-frame">
+                    <img src="images/profile.png" alt="Mananjara Andriamarolaza" class="profile-photo">
                 </div>
             </div>
+        </div>
+    </section>
 
-            <div class="project">
-                <h3>API REST avec optimisation MySQL</h3>
-                <p>Documentation Swagger, requêtes complexes avec champs JSON, partitionnement de tables</p>
-                <a href="#">📈 Voir les metrics de perf</a>
+    <!-- Expériences Section -->
+    <section id="experiences" class="experiences">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Mon parcours</span>
+                <h2 class="section-title">Expériences <span class="highlight">professionnelles</span></h2>
+                <p class="section-desc">10 ans d'expérience dans le développement web, de la startup à l'entreprise internationale</p>
             </div>
-        </section>
 
-        <section id="performance">
-            <h2>⚡ Optimisation de performance</h2>
-            <div class="perf-demo">
-                <div class="perf-card">
-                    <span class="badge">Avant</span>
-                    <p>Temps chargement : 3.2s</p>
-                    <p>Score Lighthouse : 48</p>
+            <div class="timeline">
+                <!-- Expérience 1 -->
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-date">2021 - 2026</div>
+                    <div class="timeline-content">
+                        <div class="company-logo">
+                            <i class="fas fa-code"></i>
+                        </div>
+                        <h3>Développeur Full Stack Senior</h3>
+                        <h4>Madame / Dredd.fr</h4>
+                        <p class="location"><i class="fas fa-map-marker-alt"></i> Remote (CDI)</p>
+                        <ul class="achievements">
+                            <li>Développement de plugins sur mesure Magento 2, WordPress et PrestaShop</li>
+                            <li>Création et maintenance d'applications avec Laravel, CodeIgniter et frameworks JS</li>
+                            <li>Mise en ligne et monitoring des sites en production</li>
+                            <li>Tests techniques et formation utilisateurs à distance</li>
+                        </ul>
+                        <div class="tech-stack">
+                            <span>Magento 2</span>
+                            <span>Laravel</span>
+                            <span>CodeIgniter</span>
+                            <span>WordPress</span>
+                            <span>PrestaShop</span>
+                        </div>
+                    </div>
                 </div>
-                <div class="perf-card">
-                    <span class="badge">Après</span>
-                    <p>Temps chargement : 0.4s</p>
-                    <p>Score Lighthouse : 96</p>
+
+                <!-- Expérience 2 -->
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-date">2018 - 2021</div>
+                    <div class="timeline-content">
+                        <div class="company-logo">
+                            <i class="fab fa-node-js"></i>
+                        </div>
+                        <h3>Lead Développeur Web Full Stack</h3>
+                        <h4>Onirique Factory, Madagascar</h4>
+                        <p class="location"><i class="fas fa-map-marker-alt"></i> Antananarivo</p>
+                        <ul class="achievements">
+                            <li>Développement back-end Node.js (API, communication Arduino/Raspberry Pi)</li>
+                            <li>Développement front-end React.js</li>
+                            <li>Accompagnement chef projet pour estimations</li>
+                            <li>Intégration de maquettes et développement PHP (Laravel, Symfony, CodeIgniter)</li>
+                            <li>Débogage, installation de modules et mise en ligne</li>
+                        </ul>
+                        <div class="tech-stack">
+                            <span>Node.js</span>
+                            <span>React.js</span>
+                            <span>Laravel</span>
+                            <span>Symfony</span>
+                            <span>CodeIgniter</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Expérience 3 -->
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-date">2016 - 2018</div>
+                    <div class="timeline-content">
+                        <div class="company-logo">
+                            <i class="fas fa-laptop-code"></i>
+                        </div>
+                        <h3>Responsable Informatique</h3>
+                        <h4>Net Univers, Madagascar</h4>
+                        <p class="location"><i class="fas fa-map-marker-alt"></i> Antananarivo</p>
+                        <ul class="achievements">
+                            <li>Établissement des cahiers des charges et planning</li>
+                            <li>Contrôle qualité des développements</li>
+                            <li>Supervision de la mise au point des solutions</li>
+                            <li>Maintenance et suivi d'évolution des projets</li>
+                        </ul>
+                        <div class="tech-stack">
+                            <span>Gestion de projet</span>
+                            <span>Coordination</span>
+                            <span>Maintenance</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Expérience 4 -->
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-date">2015 - 2016</div>
+                    <div class="timeline-content">
+                        <div class="company-logo">
+                            <i class="fab fa-php"></i>
+                        </div>
+                        <h3>Développeur PHP</h3>
+                        <h4>Shasama, Madagascar</h4>
+                        <p class="location"><i class="fas fa-map-marker-alt"></i> Antananarivo</p>
+                        <ul class="achievements">
+                            <li>Développement WordPress et PrestaShop (thèmes enfants, modules spécifiques)</li>
+                            <li>Développement avec Symfony et Kohana</li>
+                            <li>Développement natif PHP5 POO</li>
+                        </ul>
+                        <div class="tech-stack">
+                            <span>WordPress</span>
+                            <span>PrestaShop</span>
+                            <span>Symfony</span>
+                            <span>PHP POO</span>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <p>Stratégies appliquées : caching Redis, eager loading, compression Brotli, CDN</p>
-        </section>
+        </div>
+    </section>
 
-        <section id="contact">
-            <h2>📫 Pour postuler à l'offre</h2>
-            <p>Je suis disponible pour un entretien technique avec votre CTO</p>
-            <div class="contact-info">
-                <p>📧 rmana91@gmail.com</p>
-                <p>🐙 github.com/mana-andria-dev</p>
-                <p>💼 LinkedIn : Mana Andria</p>
+    <!-- Compétences Section -->
+    <section id="competences" class="competences">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Expertise</span>
+                <h2 class="section-title">Compétences <span class="highlight">techniques</span></h2>
+                <p class="section-desc">Un large éventail de technologies maîtrisées</p>
             </div>
-        </section>
-    </main>
 
-    <footer>
-        <p>Portfolio dédié à l'offre Développeur Full Stack - Plateforme e-learning Suisse</p>
+            <div class="skills-container">
+                <div class="skill-category">
+                    <div class="category-header">
+                        <i class="fab fa-php"></i>
+                        <h3>Backend & Frameworks PHP</h3>
+                    </div>
+                    <div class="skill-items">
+                        <div class="skill-item">
+                            <span>Laravel</span>
+                            <div class="skill-bar"><div class="skill-progress" style="width: 90%"></div></div>
+                        </div>
+                        <div class="skill-item">
+                            <span>Symfony</span>
+                            <div class="skill-bar"><div class="skill-progress" style="width: 85%"></div></div>
+                        </div>
+                        <div class="skill-item">
+                            <span>CodeIgniter</span>
+                            <div class="skill-bar"><div class="skill-progress" style="width: 85%"></div></div>
+                        </div>
+                        <div class="skill-item">
+                            <span>Magento 2</span>
+                            <div class="skill-bar"><div class="skill-progress" style="width: 80%"></div></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <div class="category-header">
+                        <i class="fab fa-js"></i>
+                        <h3>JavaScript & Frontend</h3>
+                    </div>
+                    <div class="skill-items">
+                        <div class="skill-item">
+                            <span>React js</span>
+                            <div class="skill-bar"><div class="skill-progress" style="width: 85%"></div></div>
+                        </div>
+                        <div class="skill-item">
+                            <span>Angular js</span>
+                            <div class="skill-bar"><div class="skill-progress" style="width: 80%"></div></div>
+                        </div>
+                        <div class="skill-item">
+                            <span>Node js</span>
+                            <div class="skill-bar"><div class="skill-progress" style="width: 85%"></div></div>
+                        </div>
+                        <div class="skill-item">
+                            <span>JavaScript Natif</span>
+                            <div class="skill-bar"><div class="skill-progress" style="width: 90%"></div></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <div class="category-header">
+                        <i class="fas fa-database"></i>
+                        <h3>Base de données & DevOps</h3>
+                    </div>
+                    <div class="skill-items">
+                        <div class="skill-item">
+                            <span>MySQL / PostgreSQL</span>
+                            <div class="skill-bar"><div class="skill-progress" style="width: 85%"></div></div>
+                        </div>
+                        <div class="skill-item">
+                            <span>Linux / Nginx</span>
+                            <div class="skill-bar"><div class="skill-progress" style="width: 80%"></div></div>
+                        </div>
+                        <div class="skill-item">
+                            <span>Git</span>
+                            <div class="skill-bar"><div class="skill-progress" style="width: 85%"></div></div>
+                        </div>
+                        <div class="skill-item">
+                            <span>Déploiement serveur</span>
+                            <div class="skill-bar"><div class="skill-progress" style="width: 80%"></div></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <div class="category-header">
+                        <i class="fas fa-shopping-cart"></i>
+                        <h3>CMS & E-commerce</h3>
+                    </div>
+                    <div class="skill-items">
+                        <div class="skill-item">
+                            <span>WordPress</span>
+                            <div class="skill-bar"><div class="skill-progress" style="width: 90%"></div></div>
+                        </div>
+                        <div class="skill-item">
+                            <span>PrestaShop</span>
+                            <div class="skill-bar"><div class="skill-progress" style="width: 85%"></div></div>
+                        </div>
+                        <div class="skill-item">
+                            <span>Magento 2</span>
+                            <div class="skill-bar"><div class="skill-progress" style="width: 80%"></div></div>
+                        </div>
+                        <div class="skill-item">
+                            <span>Création plugins</span>
+                            <div class="skill-bar"><div class="skill-progress" style="width: 90%"></div></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Formations Section -->
+    <section id="formations" class="formations">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Diplômes</span>
+                <h2 class="section-title">Formation <span class="highlight">académique</span></h2>
+            </div>
+
+            <div class="formation-grid">
+                <div class="formation-card">
+                    <div class="formation-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3>Licence en développement informatique</h3>
+                    <p class="formation-school">CNTEMAD, Madagascar</p>
+                    <p class="formation-year">2015</p>
+                </div>
+                <div class="formation-card">
+                    <div class="formation-icon">
+                        <i class="fas fa-diploma"></i>
+                    </div>
+                    <h3>Diplôme de Technicien Supérieur (DTS)</h3>
+                    <p class="formation-school">CNTEMAD, Madagascar</p>
+                    <p class="formation-year">2014</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Me contacter</span>
+            </div>
+
+            <div class="contact-container">
+                <div class="contact-info">
+                    <div class="contact-card">
+                        <i class="fas fa-envelope"></i>
+                        <h4>Email</h4>
+                        <p>rmana91@gmail.com</p>
+                    </div>
+                    <div class="contact-card">
+                        <i class="fab fa-github"></i>
+                        <h4>GitHub</h4>
+                        <p> 
+                        	<a href="https://github.com/mana-andria-dev/portfolio-laravel">
+                         		Mana Andria
+                         	</a>
+                     	</p>
+                    </div>
+                    <div class="contact-card">
+                        <i class="fas fa-phone"></i>
+                        <h4>Téléphone</h4>
+                        <p>+261 38 97 770 90</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 Mananjara Andriamarolaza - Laravel SaaS Développeur Senior</p>
+            <div class="footer-social">
+                <a href="#"><i class="fab fa-github"></i></a>
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+            </div>
+        </div>
     </footer>
 
     <script src="js/main.js"></script>
