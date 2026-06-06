@@ -706,146 +706,226 @@ section {
     transform: rotate(90deg);
 }
 
-/* Timeline horizontale - version améliorée */
-.timeline-horizontal {
+/* Timeline verticale - ligne par ligne */
+.timeline-vertical {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.timeline-row {
+    display: flex;
+    margin-bottom: 2.5rem;
+    position: relative;
+}
+
+.timeline-period {
+    width: 120px;
+    flex-shrink: 0;
+    text-align: right;
+    padding-right: 1.5rem;
+    padding-top: 0.25rem;
+}
+
+.timeline-period .year {
+    font-weight: 700;
+    font-size: 1.1rem;
+    color: var(--primary);
+    background: rgba(99, 102, 241, 0.1);
+    padding: 0.2rem 0.5rem;
+    border-radius: 8px;
+}
+
+.timeline-period .separator {
+    margin: 0 0.25rem;
+    color: var(--gray);
+}
+
+.timeline-line {
+    position: relative;
+    width: 30px;
+    flex-shrink: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.timeline-line::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: -2.5rem;
+    width: 2px;
+    background: linear-gradient(to bottom, var(--primary), var(--secondary));
+}
+
+.timeline-row:last-child .timeline-line::before {
+    display: none;
+}
+
+.timeline-dot {
+    width: 14px;
+    height: 14px;
+    background: var(--primary);
+    border-radius: 50%;
+    border: 3px solid white;
+    box-shadow: 0 0 0 2px var(--primary);
+    z-index: 2;
+    margin-top: 0.5rem;
+}
+
+.timeline-content {
+    flex: 1;
+    background: var(--white);
+    border-radius: 16px;
+    padding: 1.25rem 1.5rem;
+    margin-left: 1rem;
+    margin-bottom: 0.5rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.timeline-content:hover {
+    transform: translateX(5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+}
+
+.job-header {
     display: flex;
     flex-wrap: wrap;
-    gap: 1.5rem;
-    justify-content: center;
-    margin-top: 2rem;
-}
-
-.timeline-card {
-    background: var(--white);
-    border-radius: 20px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
-    width: calc(25% - 1.5rem);
-    min-width: 280px;
-    flex: 1;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    overflow: hidden;
-}
-
-.timeline-card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 20px 40px rgba(0,0,0,0.12);
-}
-
-.timeline-card-header {
-    background: linear-gradient(135deg, var(--primary), var(--primary-dark));
-    padding: 1.25rem;
-    color: white;
-    display: flex;
     justify-content: space-between;
     align-items: center;
-}
-
-.company-badge {
-    width: 45px;
-    height: 45px;
-    background: rgba(255,255,255,0.2);
-    border-radius: 12px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.company-badge i {
-    font-size: 1.5rem;
-}
-
-.date-range {
-    font-weight: 600;
-    font-size: 0.9rem;
-    background: rgba(0,0,0,0.2);
-    padding: 0.25rem 0.75rem;
-    border-radius: 20px;
-}
-
-.timeline-card-body {
-    padding: 1.25rem;
-}
-
-.timeline-card-body h3 {
-    font-size: 1.1rem;
-    color: var(--dark);
     margin-bottom: 0.25rem;
 }
 
-.timeline-card-body h4 {
-    font-size: 0.9rem;
-    color: var(--primary);
-    margin-bottom: 0.75rem;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
+.job-header h3 {
+    font-size: 1.25rem;
+    color: var(--dark);
+    margin: 0;
 }
 
 .remote-badge {
     background: var(--secondary);
     color: white;
     font-size: 0.7rem;
-    padding: 0.2rem 0.6rem;
+    font-weight: 600;
+    padding: 0.25rem 0.75rem;
     border-radius: 20px;
-    font-weight: normal;
 }
 
-.timeline-card-body .achievements {
+.timeline-content h4 {
+    color: var(--primary);
+    font-size: 0.95rem;
+    margin-bottom: 0.75rem;
+    font-weight: 500;
+}
+
+.timeline-content .achievements {
     list-style: none;
     margin: 0.75rem 0;
+    padding: 0;
 }
 
-.timeline-card-body .achievements li {
-    font-size: 0.8rem;
-    margin-bottom: 0.4rem;
-    padding-left: 1rem;
+.timeline-content .achievements li {
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+    padding-left: 1.25rem;
     position: relative;
+    line-height: 1.4;
 }
 
-.timeline-card-body .achievements li::before {
+.timeline-content .achievements li::before {
     content: '▹';
     position: absolute;
     left: 0;
     color: var(--primary);
-    font-size: 0.7rem;
 }
 
-.timeline-card-body .tech-stack {
+.timeline-content .tech-stack {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
     margin-top: 0.75rem;
 }
 
-.timeline-card-body .tech-stack span {
-    font-size: 0.7rem;
-    padding: 0.2rem 0.5rem;
-}
-
-/* Contact - liens cliquables */
-.contact-card a {
-    color: var(--gray);
-    text-decoration: none;
-    transition: color 0.3s;
-}
-
-.contact-card a:hover {
+.timeline-content .tech-stack span {
+    background: var(--light-gray);
+    padding: 0.25rem 0.75rem;
+    border-radius: 20px;
+    font-size: 0.75rem;
     color: var(--primary);
+    font-weight: 500;
 }
 
 /* Responsive */
-@media (max-width: 992px) {
-    .timeline-card {
-        width: calc(50% - 1.5rem);
-    }
-}
-
-@media (max-width: 576px) {
-    .timeline-card {
-        width: 100%;
+@media (max-width: 768px) {
+    .timeline-row {
+        flex-direction: column;
     }
     
-    .timeline-card-body h4 {
+    .timeline-period {
+        width: 100%;
+        text-align: left;
+        padding-right: 0;
+        margin-bottom: 0.5rem;
+    }
+    
+    .timeline-line {
+        display: none;
+    }
+    
+    .timeline-content {
+        margin-left: 0;
+    }
+    
+    .job-header {
         flex-direction: column;
         align-items: flex-start;
         gap: 0.5rem;
+    }
+}
+
+/* Version stricte : toujours 3 colonnes côte à côte */
+.contact-grid {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.contact-card {
+    flex: 1;
+    background: var(--white);
+    padding: 1.5rem;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease;
+}
+
+/* Sur mobile, les cartes rétrécissent mais restent alignées */
+@media (max-width: 640px) {
+    .contact-grid {
+        gap: 0.75rem;
+    }
+    
+    .contact-card {
+        padding: 1rem 0.5rem;
+    }
+    
+    .contact-icon {
+        width: 45px;
+        height: 45px;
+    }
+    
+    .contact-icon i {
+        font-size: 1.25rem;
+    }
+    
+    .contact-card h4 {
+        font-size: 0.8rem;
+    }
+    
+    .contact-card a {
+        font-size: 0.7rem;
     }
 }
