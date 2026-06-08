@@ -929,3 +929,77 @@ section {
         font-size: 0.7rem;
     }
 }
+
+/* Badge SaaS sur l'image */
+.project-badge-saas {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 6px 14px;
+    border-radius: 30px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    z-index: 2;
+}
+
+.saas-tag {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
+    color: white !important;
+}
+
+.saas-highlight {
+    background: linear-gradient(120deg, #667eea20 0%, #764ba220 100%);
+    padding: 2px 8px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 500;
+    display: inline-block;
+}
+
+.saas-features {
+    margin: 15px 0;
+}
+
+.saas-feature-title {
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: var(--primary-color);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.saas-feature-title i {
+    color: #10b981;
+}
+
+.project-pricing-note {
+    background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
+    padding: 10px 15px;
+    border-radius: 12px;
+    font-size: 0.85rem;
+    color: #92400e;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border-left: 3px solid #f59e0b;
+}
+
+.project-pricing-note i {
+    font-size: 1rem;
+}
+
+/* Ajustement du grid des features pour 2 colonnes */
+.project-features {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    margin-bottom: 5px;
+}
