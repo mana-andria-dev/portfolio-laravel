@@ -18,6 +18,8 @@
             </div>
             <ul class="nav-links">
                 <li><a href="#accueil">Accueil</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#projets">Projets</a></li>
                 <li><a href="#experiences">Expériences</a></li>
                 <li><a href="#competences">Compétences</a></li>
                 <li><a href="#formations">Formations</a></li>
@@ -120,13 +122,13 @@
                         </div>
                     </div>
                     
-                    <!-- GALERIE CARROUSEL -->
+                    <!-- GALERIE CARROUSEL AVEC ZOOM -->
                     <div class="project-gallery">
                         <div class="gallery-container">
                             <div class="gallery-slides" id="gallerySlides">
                                 <!-- Slide 1 - Accueil site public -->
                                 <div class="gallery-slide active">
-                                    <img src="images/projets/fastfid/site-accueil.png" alt="FastFid - Page d'accueil" onerror="this.src='https://via.placeholder.com/600x400?text=Page+d%27accueil'">
+                                    <img src="images/projets/fastfid/site-accueil.png" alt="FastFid - Page d'accueil" class="gallery-img" data-index="0" onerror="this.src='https://via.placeholder.com/600x400?text=Page+d%27accueil'">
                                     <div class="slide-caption">
                                         <h4>🏠 Page d'accueil</h4>
                                         <p>Site vitrine présentant la solution, les fonctionnalités et les tarifs (Essai 30j / Starter 19€/mois).</p>
@@ -134,7 +136,7 @@
                                 </div>
                                 <!-- Slide 2 - Connexion -->
                                 <div class="gallery-slide">
-                                    <img src="images/projets/fastfid/login.png" alt="FastFid - Connexion" onerror="this.src='https://via.placeholder.com/600x400?text=Connexion'">
+                                    <img src="images/projets/fastfid/login.png" alt="FastFid - Connexion" class="gallery-img" data-index="1" onerror="this.src='https://via.placeholder.com/600x400?text=Connexion'">
                                     <div class="slide-caption">
                                         <h4>🔐 Page de connexion</h4>
                                         <p>Authentification sécurisée pour accéder à l'espace administrateur (tenant) ou client.</p>
@@ -142,7 +144,7 @@
                                 </div>
                                 <!-- Slide 3 - Dashboard Tenant (Admin) -->
                                 <div class="gallery-slide">
-                                    <img src="images/projets/fastfid/admin-main.png" alt="FastFid - Dashboard tenant" onerror="this.src='https://via.placeholder.com/600x400?text=Dashboard+tenant'">
+                                    <img src="images/projets/fastfid/admin-main.png" alt="FastFid - Dashboard tenant" class="gallery-img" data-index="2" onerror="this.src='https://via.placeholder.com/600x400?text=Dashboard+tenant'">
                                     <div class="slide-caption">
                                         <h4>📊 Dashboard tenant (Admin)</h4>
                                         <p>Interface administrateur : liste des clients, recherche, points, niveau de fidélité (Bronze) et actions rapides.</p>
@@ -150,7 +152,7 @@
                                 </div>
                                 <!-- Slide 4 - Ajout de points -->
                                 <div class="gallery-slide">
-                                    <img src="images/projets/fastfid/admin-fidel.png" alt="FastFid - Ajout de points" onerror="this.src='https://via.placeholder.com/600x400?text=Ajout+de+points'">
+                                    <img src="images/projets/fastfid/admin-fidel.png" alt="FastFid - Ajout de points" class="gallery-img" data-index="3" onerror="this.src='https://via.placeholder.com/600x400?text=Ajout+de+points'">
                                     <div class="slide-caption">
                                         <h4>⭐ Ajout de points</h4>
                                         <p>Le commerçant ajoute des points en fonction du montant d'achat. Calcul automatique (ex: 40 points → nouveau total).</p>
@@ -158,7 +160,7 @@
                                 </div>
                                 <!-- Slide 5 - Liste des membres -->
                                 <div class="gallery-slide">
-                                    <img src="images/projets/fastfid/lisyçadmin_tenant.png" alt="FastFid - Liste des membres" onerror="this.src='https://via.placeholder.com/600x400?text=Liste+des+membres'">
+                                    <img src="images/projets/fastfid/lisyçadmin_tenant.png" alt="FastFid - Liste des membres" class="gallery-img" data-index="4" onerror="this.src='https://via.placeholder.com/600x400?text=Liste+des+membres'">
                                     <div class="slide-caption">
                                         <h4>📋 Liste des membres</h4>
                                         <p>Export Excel, création de campagnes, gestion complète des inscrits au programme de fidélité.</p>
@@ -166,7 +168,7 @@
                                 </div>
                                 <!-- Slide 6 - Inscription client -->
                                 <div class="gallery-slide">
-                                    <img src="images/projets/fastfid/tenant-accueil.png" alt="FastFid - Inscription client" onerror="this.src='https://via.placeholder.com/600x400?text=Inscription+client'">
+                                    <img src="images/projets/fastfid/tenant-accueil.png" alt="FastFid - Inscription client" class="gallery-img" data-index="5" onerror="this.src='https://via.placeholder.com/600x400?text=Inscription+client'">
                                     <div class="slide-caption">
                                         <h4>📝 Inscription client (Tenant)</h4>
                                         <p>Formulaire d'inscription pour rejoindre le programme de fidélité (Prénom, Nom, Mobile, Email, Ville).</p>
@@ -174,7 +176,7 @@
                                 </div>
                                 <!-- Slide 7 - Espace client -->
                                 <div class="gallery-slide">
-                                    <img src="images/projets/fastfid/client-fidel.png" alt="FastFid - Espace client" onerror="this.src='https://via.placeholder.com/600x400?text=Espace+client'">
+                                    <img src="images/projets/fastfid/client-fidel.png" alt="FastFid - Espace client" class="gallery-img" data-index="6" onerror="this.src='https://via.placeholder.com/600x400?text=Espace+client'">
                                     <div class="slide-caption">
                                         <h4>👤 Espace client</h4>
                                         <p>Le client visualise ses points (40), son historique et ses bons d'achat. Transparence totale.</p>
@@ -200,30 +202,68 @@
                             </a>
                         </div>
                     </div>
+
+                    <!-- MODAL ZOOM -->
+                    <div id="imageModal" class="modal">
+                        <div class="modal-content">
+                            <span class="modal-close">&times;</span>
+                            <img id="modalImage" class="modal-image" src="" alt="">
+                            <div id="modalCaption" class="modal-caption"></div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>    
 
-    <section id="services">
+    <!-- Services Section - Ce que je peux réaliser -->
+    <section id="services" class="services">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Expertise</span>
+                <h2 class="section-title">Ce que <span class="highlight">je peux réaliser</span></h2>
+                <p class="section-desc">Des solutions sur mesure adaptées à vos besoins</p>
+            </div>
 
-    <h2>Ce que je peux réaliser</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-cloud"></i>
+                    </div>
+                    <h3>SaaS & Multi-Tenant</h3>
+                    <p>Plateformes SaaS complètes avec architecture multi-tenant, gestion d'abonnements Stripe et isolation des données.</p>
+                    <div class="service-tech">Laravel · MySQL · Stripe API</div>
+                </div>
 
-    ✓ Développement SaaS Laravel
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-code-branch"></i>
+                    </div>
+                    <h3>API REST</h3>
+                    <p>Création d'API robustes, documentées et sécurisées pour vos applications mobiles ou web.</p>
+                    <div class="service-tech">Laravel API · JWT · Sanctum · Swagger</div>
+                </div>
 
-    ✓ Plateformes Multi-Tenant
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-qrcode"></i>
+                    </div>
+                    <h3>Fidélisation & QR Code</h3>
+                    <p>Programmes de fidélité, génération de QR codes dynamiques, scanning et attribution de points.</p>
+                    <div class="service-tech">QR Code API · Points System · Analytics</div>
+                </div>
 
-    ✓ Intégration Stripe
-
-    ✓ API REST
-
-    ✓ Développement WordPress sur mesure
-
-    ✓ E-commerce Magento / Prestashop
-
-    ✓ Maintenance et évolution d'applications
-
-    </section>    
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3>Maintenance & Évolution</h3>
+                    <p>Audit, correction de bugs, évolutions fonctionnelles et monitoring 24/7.</p>
+                    <div class="service-tech">Debug · Performance · Sécurité</div>
+                </div>
+            </div>
+        </div>
+    </section> 
 
     <!-- Expériences Section - Version verticale ligne par ligne -->
     <section id="experiences" class="experiences">

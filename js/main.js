@@ -131,3 +131,84 @@ document.addEventListener('DOMContentLoaded', function() {
     createDots();
     startAutoPlay();
 });
+
+// ========== MODAL ZOOM POUR LA GALERIE ==========
+(function() {
+    // Attendre que le DOM soit chargé
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', initModal);
+    } else {
+        initModal();
+    }
+    
+    function initModal() {
+        const modal = document.getElementById('imageModal');
+        const modalImg = document.getElementById('modalImage');
+        const modalCaption = document.getElementById('modalCaption');
+        const closeBtn = document.querySelector('.modal-close');
+        
+        // Si le modal n'existe pas, on ne fait rien
+        if (!modal) return;
+        
+        // Récupérer toutes les images de la galerie
+        const galleryImages = document.querySelectorAll('.gallery-img');
+        
+        // Stocker les descriptions des slides
+        const slideDescriptions = [];
+        document.querySelectorAll('.gallery-slide').forEach(slide => {
+            const caption = slide.querySelector('.slide-caption');
+            if (caption) {
+                const h4 = caption.querySelector('h4');
+                const p = caption.querySelector('p');
+                slideDescriptions.push({
+                    title: h4 ? h4.innerHTML : '',
+                    desc: p ? p.innerHTML : ''
+                });
+            }
+        });
+        
+        // Ajouter l'événement de clic sur chaque image
+        galleryImages.forEach((img, index) => {
+            img.style.cursor = 'pointer';
+            img.addEventListener('click', function(e) {
+                e.stopPropagation();
+                const imgSrc = this.getAttribute('src');
+                modalImg.setAttribute('src', imgSrc);
+                
+                // Afficher la description correspondante
+                if (slideDescriptions[index]) {
+                    modalCaption.innerHTML = `${slideDescriptions[index].title}<br><span style="font-size:0.85rem; color:#cbd5e1;">${slideDescriptions[index].desc}</span>`;
+                } else {
+                    modalCaption.innerHTML = this.getAttribute('alt') || 'Capture d\'écran';
+                }
+                
+                modal.style.display = 'block';
+                document.body.style.overflow = 'hidden'; // Empêcher le scroll
+            });
+        });
+        
+        // Fermer le modal au clic sur la croix
+        if (closeBtn) {
+            closeBtn.addEventListener('click', function() {
+                modal.style.display = 'none';
+                document.body.style.overflow = '';
+            });
+        }
+        
+        // Fermer le modal au clic en dehors de l'image
+        modal.addEventListener('click', function(e) {
+            if (e.target === modal) {
+                modal.style.display = 'none';
+                document.body.style.overflow = '';
+            }
+        });
+        
+        // Fermer avec la touche Echap
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape' && modal.style.display === 'block') {
+                modal.style.display = 'none';
+                document.body.style.overflow = '';
+            }
+        });
+    }
+})();
