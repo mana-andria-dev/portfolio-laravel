@@ -79,7 +79,7 @@
         </div>
     </section>
 
-<!-- Section Projets refondue - Sans images manquantes, avec cadre haut/bas -->
+<!-- Section Projets - Version avec GALERIE D'IMAGES -->
 <section id="projets" class="projets" style="background: linear-gradient(135deg, #f8fafc 0%, #ffffff 100%); border-top: 4px solid #667eea; border-bottom: 1px solid #e2e8f0;">
     <div class="container">
         <div class="section-header">
@@ -98,7 +98,7 @@
                 </div>
 
                 <!-- Contenu 2 colonnes -->
-                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; padding: 1.5rem 2rem 2rem 2rem;">
+                <div style="display: grid; grid-template-columns: 1fr 1.2fr; gap: 2rem; padding: 1.5rem 2rem 2rem 2rem;">
                     
                     <!-- Colonne gauche : description -->
                     <div>
@@ -128,31 +128,64 @@
                         <a href="https://fastfid.com" target="_blank" style="display: inline-flex; align-items: center; gap: 0.5rem; background: #0f172a; color: white; padding: 0.7rem 1.5rem; border-radius: 2rem; text-decoration: none; font-weight: 500; transition: all 0.2s;">👉 Découvrir FastFid <i class="fas fa-arrow-right"></i></a>
                     </div>
 
-                    <!-- Colonne droite : miniatures fonctionnelles (remplace la galerie) -->
-                    <div>
-                        <div style="background: linear-gradient(145deg, #f8fafc, #ffffff); border-radius: 1rem; padding: 1rem; margin-bottom: 1rem; border: 1px solid #e2e8f0;">
-                            <div style="display: flex; align-items: center; gap: 0.8rem; margin-bottom: 1rem;">
-                                <i class="fas fa-chart-line" style="font-size: 1.8rem; color:#667eea;"></i>
-                                <h4 style="margin:0;">Dashboard commerçant</h4>
+                    <!-- Colonne droite : GALERIE CARROUSEL -->
+                    <div class="project-gallery">
+                        <div class="gallery-container" style="position: relative; background: #f1f5f9; border-radius: 1rem; overflow: hidden;">
+                            <div class="gallery-slides" id="gallerySlides" style="position: relative;">
+                                
+                                <div class="gallery-slide active">
+                                    <img src="images/projets/fastfid/site-accueil.png" alt="Page d'accueil FastFid" class="gallery-img" style="width: 100%; height: auto; display: block;">
+                                    <div class="slide-caption" style="position: absolute; bottom: 0; left: 0; right: 0; background: linear-gradient(to top, rgba(0,0,0,0.8), transparent); color: white; padding: 1rem;">
+                                        <strong>🏠 Page d'accueil</strong> - Inscription au programme de fidélité
+                                    </div>
+                                </div>
+                                
+                                <div class="gallery-slide">
+                                    <img src="images/projets/fastfid/login.png" alt="Connexion FastFid" class="gallery-img" style="width: 100%; height: auto; display: block;">
+                                    <div class="slide-caption" style="position: absolute; bottom: 0; left: 0; right: 0; background: linear-gradient(to top, rgba(0,0,0,0.8), transparent); color: white; padding: 1rem;">
+                                        <strong>🔐 Connexion</strong> - Authentification commerçant / client
+                                    </div>
+                                </div>
+                                
+                                <div class="gallery-slide">
+                                    <img src="images/projets/fastfid/admin-main.png" alt="Dashboard commerçant FastFid" class="gallery-img" style="width: 100%; height: auto; display: block;">
+                                    <div class="slide-caption" style="position: absolute; bottom: 0; left: 0; right: 0; background: linear-gradient(to top, rgba(0,0,0,0.8), transparent); color: white; padding: 1rem;">
+                                        <strong>📊 Dashboard commerçant</strong> - Gestion des clients et points
+                                    </div>
+                                </div>
+                                
+                                <div class="gallery-slide">
+                                    <img src="images/projets/fastfid/admin-fidel.png" alt="Ajout de points FastFid" class="gallery-img" style="width: 100%; height: auto; display: block;">
+                                    <div class="slide-caption" style="position: absolute; bottom: 0; left: 0; right: 0; background: linear-gradient(to top, rgba(0,0,0,0.8), transparent); color: white; padding: 1rem;">
+                                        <strong>⭐ Ajout de points</strong> - Attribution selon le montant d'achat
+                                    </div>
+                                </div>
+                                
+                                <div class="gallery-slide">
+                                    <img src="images/projets/fastfid/lisyadmin_tenant.png" alt="Liste des membres FastFid" class="gallery-img" style="width: 100%; height: auto; display: block;" onerror="this.src='images/projets/fastfid/lisyçadmin_tenant.png'">
+                                    <div class="slide-caption" style="position: absolute; bottom: 0; left: 0; right: 0; background: linear-gradient(to top, rgba(0,0,0,0.8), transparent); color: white; padding: 1rem;">
+                                        <strong>📋 Liste des membres</strong> - Export Excel et gestion des inscrits
+                                    </div>
+                                </div>
+                                
+                                <div class="gallery-slide">
+                                    <img src="images/projets/fastfid/client-fidel.png" alt="Espace client FastFid" class="gallery-img" style="width: 100%; height: auto; display: block;">
+                                    <div class="slide-caption" style="position: absolute; bottom: 0; left: 0; right: 0; background: linear-gradient(to top, rgba(0,0,0,0.8), transparent); color: white; padding: 1rem;">
+                                        <strong>👤 Espace client</strong> - Points, historique et bons d'achat
+                                    </div>
+                                </div>
                             </div>
-                            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 0.5rem;">
-                                <div><i class="fas fa-chart-simple"></i> Chiffres clés</div>
-                                <div><i class="fas fa-users"></i> Liste clients</div>
-                                <div><i class="fas fa-qrcode"></i> Scanner QR</div>
-                                <div><i class="fas fa-chart-line"></i> Graphiques</div>
-                            </div>
+                            
+                            <!-- Boutons navigation -->
+                            <button class="gallery-nav prev" id="galleryPrev" style="position: absolute; top: 50%; left: 1rem; transform: translateY(-50%); background: rgba(0,0,0,0.6); color: white; border: none; width: 2.5rem; height: 2.5rem; border-radius: 50%; cursor: pointer; z-index: 10;">❮</button>
+                            <button class="gallery-nav next" id="galleryNext" style="position: absolute; top: 50%; right: 1rem; transform: translateY(-50%); background: rgba(0,0,0,0.6); color: white; border: none; width: 2.5rem; height: 2.5rem; border-radius: 50%; cursor: pointer; z-index: 10;">❯</button>
+                            
+                            <!-- Dots -->
+                            <div class="gallery-dots" id="galleryDots" style="position: absolute; bottom: 1rem; left: 50%; transform: translateX(-50%); display: flex; gap: 0.5rem; z-index: 10;"></div>
                         </div>
-                        <div style="background: linear-gradient(145deg, #f8fafc, #ffffff); border-radius: 1rem; padding: 1rem; border: 1px solid #e2e8f0;">
-                            <div style="display: flex; align-items: center; gap: 0.8rem; margin-bottom: 1rem;">
-                                <i class="fas fa-mobile-alt" style="font-size: 1.8rem; color:#764ba2;"></i>
-                                <h4 style="margin:0;">Espace client</h4>
-                            </div>
-                            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 0.5rem;">
-                                <div><i class="fas fa-coins"></i> Solde points</div>
-                                <div><i class="fas fa-history"></i> Historique</div>
-                                <div><i class="fas fa-qrcode"></i> QR code perso</div>
-                                <div><i class="fas fa-ticket"></i> Bons d'achat</div>
-                            </div>
+                        
+                        <div class="gallery-cta" style="margin-top: 1rem; text-align: center;">
+                            <a href="https://fastfid.com" target="_blank" style="display: inline-flex; align-items: center; gap: 0.5rem; background: linear-gradient(135deg, #667eea, #764ba2); color: white; padding: 0.7rem 1.5rem; border-radius: 2rem; text-decoration: none; font-weight: 500;">Explorer FastFid →</a>
                         </div>
                     </div>
                 </div>
