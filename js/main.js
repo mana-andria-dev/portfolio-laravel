@@ -118,6 +118,95 @@ if (yearElement) {
     }
 })();
 
+// ========== GALERIE CARROUSEL POUR FASTFID ==========
+(function() {
+    function initGallery() {
+        const slides = document.querySelectorAll('.gallery-slide');
+        const prevBtn = document.getElementById('galleryPrev');
+        const nextBtn = document.getElementById('galleryNext');
+        const dotsContainer = document.getElementById('galleryDots');
+        
+        // Si la galerie n'existe pas sur cette page, on sort
+        if (!slides.length || !prevBtn || !nextBtn || !dotsContainer) return;
+        
+        let currentIndex = 0;
+        let autoInterval;
+        
+        // Créer les dots (points de navigation)
+        function createDots() {
+            dotsContainer.innerHTML = '';
+            slides.forEach((_, index) => {
+                const dot = document.createElement('div');
+                dot.classList.add('dot');
+                if (index === currentIndex) dot.classList.add('active');
+                dot.addEventListener('click', () => goToSlide(index));
+                dotsContainer.appendChild(dot);
+            });
+        }
+        
+        // Aller à un slide spécifique
+        function goToSlide(index) {
+            slides.forEach(slide => slide.classList.remove('active'));
+            currentIndex = (index + slides.length) % slides.length;
+            slides[currentIndex].classList.add('active');
+            
+            // Mettre à jour les dots
+            document.querySelectorAll('.dot').forEach((dot, i) => {
+                dot.classList.toggle('active', i === currentIndex);
+            });
+            
+            resetAutoPlay();
+        }
+        
+        // Slide suivant
+        function nextSlide() {
+            goToSlide(currentIndex + 1);
+        }
+        
+        // Slide précédent
+        function prevSlide() {
+            goToSlide(currentIndex - 1);
+        }
+        
+        // Auto-play toutes les 5 secondes
+        function startAutoPlay() {
+            if (autoInterval) clearInterval(autoInterval);
+            autoInterval = setInterval(nextSlide, 5000);
+        }
+        
+        function resetAutoPlay() {
+            clearInterval(autoInterval);
+            startAutoPlay();
+        }
+        
+        function stopAutoPlay() {
+            clearInterval(autoInterval);
+        }
+        
+        // Événements des boutons
+        prevBtn.addEventListener('click', prevSlide);
+        nextBtn.addEventListener('click', nextSlide);
+        
+        // Pause auto-play au survol de la galerie
+        const galleryContainer = document.querySelector('.gallery-container');
+        if (galleryContainer) {
+            galleryContainer.addEventListener('mouseenter', stopAutoPlay);
+            galleryContainer.addEventListener('mouseleave', startAutoPlay);
+        }
+        
+        // Initialisation
+        createDots();
+        startAutoPlay();
+    }
+    
+    // Attendre que le DOM soit chargé
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', initGallery);
+    } else {
+        initGallery();
+    }
+})();
+
 // Animation au scroll pour les cartes (services, compétences, expériences)
 const fadeElements = document.querySelectorAll('.service-card, .skill-category, .timeline-row, .formation-card, .contact-card, .project-card');
 
@@ -149,3 +238,4 @@ window.addEventListener('scroll', function() {
         }
     }
 });
+
