@@ -79,127 +79,179 @@
         </div>
     </section>
 
-    <!-- Projets Section - FastFid SaaS avec Galerie -->
+    <!-- Projets Section - FastFid SaaS avec Galerie Améliorée -->
     <section id="projets" class="projets">
         <div class="container">
             <div class="section-header">
                 <span class="section-tag">Réalisations</span>
                 <h2 class="section-title">Projets <span class="highlight">phares</span></h2>
-                <p class="section-desc">Des solutions concrètes qui répondent à des besoins réels</p>
+                <p class="section-desc">Des solutions SaaS innovantes qui transforment l'expérience client</p>
             </div>
 
             <div class="project-showcase">
                 <div class="project-card">
-                    <div class="project-info">
-                        <div class="project-tags">
-                            <span class="saas-tag">SaaS</span>
-                            <span>Laravel</span>
-                            <span>MySQL</span>
-                            <span>API QR Code</span>
-                        </div>
-                        <h3>FastFid – Plateforme SaaS de fidélisation <span class="saas-highlight">100% en ligne</span></h3>
-                        <p class="project-description">
-                            <strong>SaaS complet</strong> permettant aux commerçants de gérer un programme de fidélité sans installation. 
-                            Génération de QR codes uniques, scan des achats, attribution automatique de points et dashboard analytics.
-                        </p>
-                        
-                        <div class="saas-features">
-                            <div class="saas-feature-title">
-                                <i class="fas fa-check-circle"></i> Architecture SaaS :
-                            </div>
-                            <div class="project-features">
-                                <div class="feature"><i class="fas fa-users"></i><span>Multi-commerçants (tenants)</span></div>
-                                <div class="feature"><i class="fas fa-tags"></i><span>Système de forfaits (Essai/Starter/Sur-mesure)</span></div>
-                                <div class="feature"><i class="fas fa-credit-card"></i><span>Paiement mensuel/annuel</span></div>
-                                <div class="feature"><i class="fas fa-chart-line"></i><span>Dashboard analytics par commerçant</span></div>
-                                <div class="feature"><i class="fas fa-qrcode"></i><span>Génération dynamique de QR codes</span></div>
-                                <div class="feature"><i class="fas fa-bolt"></i><span>Scan ultra-rapide</span></div>
-                            </div>
-                        </div>
-                        
-                        <div class="project-pricing-note">
-                            <i class="fas fa-gift"></i> Forfait Essai 30 jours gratuit | Starter à 19€/mois | Solution sur-mesure disponible
-                        </div>
+                    <!-- En-tête du projet avec badges -->
+                    <div class="project-header-badges">
+                        <span class="project-badge saas">SaaS</span>
+                        <span class="project-badge status">En production</span>
                     </div>
                     
-                    <!-- GALERIE CARROUSEL AVEC ZOOM -->
-                    <div class="project-gallery">
-                        <div class="gallery-container">
-                            <div class="gallery-slides" id="gallerySlides">
-                                <!-- Slide 1 - Accueil site public -->
-                                <div class="gallery-slide active">
-                                    <img src="images/projets/fastfid/site-accueil.png" alt="FastFid - Page d'accueil" class="gallery-img" data-index="0" onerror="this.src='https://via.placeholder.com/600x400?text=Page+d%27accueil'">
-                                    <div class="slide-caption">
-                                        <h4>🏠 Page d'accueil</h4>
-                                        <p>Site vitrine présentant la solution, les fonctionnalités et les tarifs (Essai 30j / Starter 19€/mois).</p>
-                                    </div>
+                    <div class="project-layout">
+                        <!-- Colonne gauche : Description -->
+                        <div class="project-info">
+                            <h3>FastFid – Plateforme SaaS de <span class="saas-highlight">fidélisation 100% en ligne</span></h3>
+                            
+                            <div class="project-description">
+                                <p><strong>SaaS complet</strong> permettant aux commerçants de gérer un programme de fidélité sans installation. 
+                                Génération de QR codes uniques, scan des achats, attribution automatique de points et dashboard analytics.</p>
+                            </div>
+                            
+                            <!-- Tech stack compact -->
+                            <div class="project-tech-stack">
+                                <span><i class="fab fa-laravel"></i> Laravel</span>
+                                <span><i class="fas fa-database"></i> MySQL</span>
+                                <span><i class="fas fa-qrcode"></i> QR Code API</span>
+                                <span><i class="fab fa-stripe"></i> Stripe</span>
+                            </div>
+                            
+                            <!-- Features sous forme de liste icônes -->
+                            <div class="saas-features">
+                                <div class="saas-feature-title">
+                                    <i class="fas fa-crown"></i> Architecture SaaS complète :
                                 </div>
-                                <!-- Slide 2 - Connexion -->
-                                <div class="gallery-slide">
-                                    <img src="images/projets/fastfid/login.png" alt="FastFid - Connexion" class="gallery-img" data-index="1" onerror="this.src='https://via.placeholder.com/600x400?text=Connexion'">
-                                    <div class="slide-caption">
-                                        <h4>🔐 Page de connexion</h4>
-                                        <p>Authentification sécurisée pour accéder à l'espace administrateur (tenant) ou client.</p>
-                                    </div>
-                                </div>
-                                <!-- Slide 3 - Dashboard Tenant (Admin) -->
-                                <div class="gallery-slide">
-                                    <img src="images/projets/fastfid/admin-main.png" alt="FastFid - Dashboard tenant" class="gallery-img" data-index="2" onerror="this.src='https://via.placeholder.com/600x400?text=Dashboard+tenant'">
-                                    <div class="slide-caption">
-                                        <h4>📊 Dashboard tenant (Admin)</h4>
-                                        <p>Interface administrateur : liste des clients, recherche, points, niveau de fidélité (Bronze) et actions rapides.</p>
-                                    </div>
-                                </div>
-                                <!-- Slide 4 - Ajout de points -->
-                                <div class="gallery-slide">
-                                    <img src="images/projets/fastfid/admin-fidel.png" alt="FastFid - Ajout de points" class="gallery-img" data-index="3" onerror="this.src='https://via.placeholder.com/600x400?text=Ajout+de+points'">
-                                    <div class="slide-caption">
-                                        <h4>⭐ Ajout de points</h4>
-                                        <p>Le commerçant ajoute des points en fonction du montant d'achat. Calcul automatique (ex: 40 points → nouveau total).</p>
-                                    </div>
-                                </div>
-                                <!-- Slide 5 - Liste des membres -->
-                                <div class="gallery-slide">
-                                    <img src="images/projets/fastfid/lisyçadmin_tenant.png" alt="FastFid - Liste des membres" class="gallery-img" data-index="4" onerror="this.src='https://via.placeholder.com/600x400?text=Liste+des+membres'">
-                                    <div class="slide-caption">
-                                        <h4>📋 Liste des membres</h4>
-                                        <p>Export Excel, création de campagnes, gestion complète des inscrits au programme de fidélité.</p>
-                                    </div>
-                                </div>
-                                <!-- Slide 6 - Inscription client -->
-                                <div class="gallery-slide">
-                                    <img src="images/projets/fastfid/tenant-accueil.png" alt="FastFid - Inscription client" class="gallery-img" data-index="5" onerror="this.src='https://via.placeholder.com/600x400?text=Inscription+client'">
-                                    <div class="slide-caption">
-                                        <h4>📝 Inscription client (Tenant)</h4>
-                                        <p>Formulaire d'inscription pour rejoindre le programme de fidélité (Prénom, Nom, Mobile, Email, Ville).</p>
-                                    </div>
-                                </div>
-                                <!-- Slide 7 - Espace client -->
-                                <div class="gallery-slide">
-                                    <img src="images/projets/fastfid/client-fidel.png" alt="FastFid - Espace client" class="gallery-img" data-index="6" onerror="this.src='https://via.placeholder.com/600x400?text=Espace+client'">
-                                    <div class="slide-caption">
-                                        <h4>👤 Espace client</h4>
-                                        <p>Le client visualise ses points (40), son historique et ses bons d'achat. Transparence totale.</p>
-                                    </div>
+                                <div class="project-features-grid">
+                                    <div class="feature"><i class="fas fa-store"></i><span>Multi-commerçants (tenants)</span></div>
+                                    <div class="feature"><i class="fas fa-tags"></i><span>Système de forfaits (Essai/Starter/Sur-mesure)</span></div>
+                                    <div class="feature"><i class="fas fa-credit-card"></i><span>Paiement mensuel/annuel Stripe</span></div>
+                                    <div class="feature"><i class="fas fa-chart-line"></i><span>Dashboard analytics par commerçant</span></div>
+                                    <div class="feature"><i class="fas fa-qrcode"></i><span>Génération dynamique de QR codes</span></div>
+                                    <div class="feature"><i class="fas fa-bolt"></i><span>Scan ultra-rapide des achats</span></div>
                                 </div>
                             </div>
                             
-                            <!-- Navigation buttons -->
-                            <button class="gallery-nav prev" id="galleryPrev">
-                                <i class="fas fa-chevron-left"></i>
-                            </button>
-                            <button class="gallery-nav next" id="galleryNext">
-                                <i class="fas fa-chevron-right"></i>
-                            </button>
-                            
-                            <!-- Dots indicators -->
-                            <div class="gallery-dots" id="galleryDots"></div>
+                            <!-- Offre pricing -->
+                            <div class="project-pricing">
+                                <div class="pricing-offer">
+                                    <i class="fas fa-gift"></i>
+                                    <div>
+                                        <strong>Forfait Essai</strong> 30 jours gratuit
+                                    </div>
+                                </div>
+                                <div class="pricing-offer">
+                                    <i class="fas fa-rocket"></i>
+                                    <div>
+                                        <strong>Starter</strong> à 19€/mois
+                                    </div>
+                                </div>
+                                <div class="pricing-offer">
+                                    <i class="fas fa-building"></i>
+                                    <div>
+                                        <strong>Solution sur-mesure</strong> disponible
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                         
-                        <div class="gallery-cta">
-                            <a href="https://fastfid.com" target="_blank" class="btn-project">
-                                Explorer FastFid <i class="fas fa-arrow-right"></i>
-                            </a>
+                        <!-- Colonne droite : Galerie Carrousel -->
+                        <div class="project-gallery">
+                            <div class="gallery-container">
+                                <div class="gallery-slides" id="gallerySlides">
+                                    <!-- Slide 1 -->
+                                    <div class="gallery-slide active">
+                                        <img src="images/projets/fastfid/site-accueil.png" alt="FastFid - Page d'accueil" class="gallery-img" data-index="0" onerror="this.src='https://via.placeholder.com/550x350?text=Page+d%27accueil'">
+                                        <div class="slide-caption">
+                                            <span class="caption-icon">🏠</span>
+                                            <div>
+                                                <strong>Page d'accueil</strong>
+                                                <p>Site vitrine présentant la solution, les fonctionnalités et les tarifs</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Slide 2 -->
+                                    <div class="gallery-slide">
+                                        <img src="images/projets/fastfid/login.png" alt="FastFid - Connexion" class="gallery-img" data-index="1" onerror="this.src='https://via.placeholder.com/550x350?text=Connexion'">
+                                        <div class="slide-caption">
+                                            <span class="caption-icon">🔐</span>
+                                            <div>
+                                                <strong>Page de connexion</strong>
+                                                <p>Authentification sécurisée pour accéder à l'espace administrateur ou client</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Slide 3 -->
+                                    <div class="gallery-slide">
+                                        <img src="images/projets/fastfid/admin-main.png" alt="FastFid - Dashboard tenant" class="gallery-img" data-index="2" onerror="this.src='https://via.placeholder.com/550x350?text=Dashboard+tenant'">
+                                        <div class="slide-caption">
+                                            <span class="caption-icon">📊</span>
+                                            <div>
+                                                <strong>Dashboard tenant</strong>
+                                                <p>Interface administrateur : clients, points, niveaux de fidélité et actions rapides</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Slide 4 -->
+                                    <div class="gallery-slide">
+                                        <img src="images/projets/fastfid/admin-fidel.png" alt="FastFid - Ajout de points" class="gallery-img" data-index="3" onerror="this.src='https://via.placeholder.com/550x350?text=Ajout+de+points'">
+                                        <div class="slide-caption">
+                                            <span class="caption-icon">⭐</span>
+                                            <div>
+                                                <strong>Ajout de points</strong>
+                                                <p>Ajout de points en fonction du montant d'achat, calcul automatique</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Slide 5 -->
+                                    <div class="gallery-slide">
+                                        <img src="images/projets/fastfid/lisyçadmin_tenant.png" alt="FastFid - Liste des membres" class="gallery-img" data-index="4" onerror="this.src='https://via.placeholder.com/550x350?text=Liste+des+membres'">
+                                        <div class="slide-caption">
+                                            <span class="caption-icon">📋</span>
+                                            <div>
+                                                <strong>Liste des membres</strong>
+                                                <p>Export Excel, création de campagnes, gestion complète des inscrits</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Slide 6 -->
+                                    <div class="gallery-slide">
+                                        <img src="images/projets/fastfid/tenant-accueil.png" alt="FastFid - Inscription client" class="gallery-img" data-index="5" onerror="this.src='https://via.placeholder.com/550x350?text=Inscription+client'">
+                                        <div class="slide-caption">
+                                            <span class="caption-icon">📝</span>
+                                            <div>
+                                                <strong>Inscription client</strong>
+                                                <p>Formulaire d'inscription au programme de fidélité</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Slide 7 -->
+                                    <div class="gallery-slide">
+                                        <img src="images/projets/fastfid/client-fidel.png" alt="FastFid - Espace client" class="gallery-img" data-index="6" onerror="this.src='https://via.placeholder.com/550x350?text=Espace+client'">
+                                        <div class="slide-caption">
+                                            <span class="caption-icon">👤</span>
+                                            <div>
+                                                <strong>Espace client</strong>
+                                                <p>Visualisation des points, historique et bons d'achat</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <!-- Navigation buttons -->
+                                <button class="gallery-nav prev" id="galleryPrev">
+                                    <i class="fas fa-chevron-left"></i>
+                                </button>
+                                <button class="gallery-nav next" id="galleryNext">
+                                    <i class="fas fa-chevron-right"></i>
+                                </button>
+                                
+                                <!-- Dots indicators -->
+                                <div class="gallery-dots" id="galleryDots"></div>
+                            </div>
+                            
+                            <div class="gallery-cta">
+                                <a href="https://fastfid.com" target="_blank" class="btn-project">
+                                    Découvrir FastFid <i class="fas fa-arrow-right"></i>
+                                </a>
+                            </div>
                         </div>
                     </div>
 
@@ -214,7 +266,7 @@
                 </div>
             </div>
         </div>
-    </section>    
+    </section>
 
     <!-- Services Section - Ce que je peux réaliser -->
     <section id="services" class="services">
