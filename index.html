@@ -79,7 +79,7 @@
         </div>
     </section>
 
-<!-- Section Projets - Version avec GALERIE D'IMAGES -->
+<!-- Section Projets - Galerie sur une nouvelle ligne en plein écran -->
 <section id="projets" class="projets" style="background: linear-gradient(135deg, #f8fafc 0%, #ffffff 100%); border-top: 4px solid #667eea; border-bottom: 1px solid #e2e8f0;">
     <div class="container">
         <div class="section-header">
@@ -97,76 +97,86 @@
                     <span style="background: #e2e8f0; color: #334155; padding: 0.3rem 1rem; border-radius: 2rem; font-size: 0.8rem; font-weight: 600;">Laravel / MySQL / Stripe</span>
                 </div>
 
-                <!-- Contenu 2 colonnes -->
-                <div style="display: grid; grid-template-columns: 1fr 1.2fr; gap: 2rem; padding: 1.5rem 2rem 2rem 2rem;">
-                    
-                    <!-- Colonne gauche : description -->
-                    <div>
-                        <h3 style="font-size: 1.6rem; margin-bottom: 1rem;">Solution <span style="background: linear-gradient(135deg, #667eea, #764ba2); background-clip: text; -webkit-background-clip: text; -webkit-text-fill-color: transparent;">100% SaaS</span></h3>
-                        <p style="color: #334155; line-height: 1.5; margin-bottom: 1.2rem;">FastFid permet aux commerçants de lancer un programme de fidélité sans aucune installation. Gérez vos clients, attribuez des points via QR code, et analysez vos performances.</p>
+                <!-- Première ligne : Description (pleine largeur) -->
+                <div style="padding: 1.5rem 2rem 0 2rem;">
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem;">
+                        <!-- Colonne gauche : intro -->
+                        <div>
+                            <h3 style="font-size: 1.6rem; margin-bottom: 1rem;">Solution <span style="background: linear-gradient(135deg, #667eea, #764ba2); background-clip: text; -webkit-background-clip: text; -webkit-text-fill-color: transparent;">100% SaaS</span></h3>
+                            <p style="color: #334155; line-height: 1.5; margin-bottom: 1.2rem;">FastFid permet aux commerçants de lancer un programme de fidélité sans aucune installation. Gérez vos clients, attribuez des points via QR code, et analysez vos performances.</p>
+                        </div>
                         
-                        <!-- Bloc features -->
-                        <div style="background: #f1f5f9; border-radius: 1rem; padding: 1rem; margin-bottom: 1.2rem;">
-                            <div style="font-weight: 700; margin-bottom: 0.8rem;">✨ Fonctionnalités clés :</div>
-                            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 0.5rem;">
-                                <div><i class="fas fa-check-circle" style="color:#10b981;"></i> Multi-commerçants</div>
-                                <div><i class="fas fa-check-circle" style="color:#10b981;"></i> Forfaits (Essai/Starter)</div>
-                                <div><i class="fas fa-check-circle" style="color:#10b981;"></i> Paiement Stripe</div>
-                                <div><i class="fas fa-check-circle" style="color:#10b981;"></i> Dashboard analytics</div>
-                                <div><i class="fas fa-check-circle" style="color:#10b981;"></i> QR code dynamique</div>
-                                <div><i class="fas fa-check-circle" style="color:#10b981;"></i> Scan ultra-rapide</div>
+                        <!-- Colonne droite : offres -->
+                        <div>
+                            <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+                                <div style="flex: 1; background: #f1f5f9; border-radius: 0.75rem; padding: 0.5rem 0.8rem; display: flex; align-items: center; gap: 0.6rem;"><i class="fas fa-flask" style="color:#667eea;"></i><div><strong>30 jours gratuits</strong><br>Forfait Essai</div></div>
+                                <div style="flex: 1; background: #f1f5f9; border-radius: 0.75rem; padding: 0.5rem 0.8rem; display: flex; align-items: center; gap: 0.6rem;"><i class="fas fa-rocket" style="color:#667eea;"></i><div><strong>19€/mois</strong><br>Starter</div></div>
+                            </div>
+                            <div style="margin-top: 1rem;">
+                                <a href="https://fastfid.com" target="_blank" style="display: inline-flex; align-items: center; gap: 0.5rem; background: #0f172a; color: white; padding: 0.7rem 1.5rem; border-radius: 2rem; text-decoration: none; font-weight: 500;">👉 Découvrir FastFid <i class="fas fa-arrow-right"></i></a>
                             </div>
                         </div>
-
-                        <!-- Offres -->
-                        <div style="display: flex; gap: 1rem; margin-bottom: 1.5rem; flex-wrap: wrap;">
-                            <div style="flex: 1; background: white; border: 1px solid #cbd5e1; border-radius: 0.75rem; padding: 0.5rem 0.8rem; display: flex; align-items: center; gap: 0.6rem;"><i class="fas fa-flask" style="color:#667eea;"></i><div><strong>30 jours gratuits</strong><br>Forfait Essai</div></div>
-                            <div style="flex: 1; background: white; border: 1px solid #cbd5e1; border-radius: 0.75rem; padding: 0.5rem 0.8rem; display: flex; align-items: center; gap: 0.6rem;"><i class="fas fa-rocket" style="color:#667eea;"></i><div><strong>19€/mois</strong><br>Starter</div></div>
-                        </div>
-
-                        <a href="https://fastfid.com" target="_blank" style="display: inline-flex; align-items: center; gap: 0.5rem; background: #0f172a; color: white; padding: 0.7rem 1.5rem; border-radius: 2rem; text-decoration: none; font-weight: 500;">👉 Découvrir FastFid <i class="fas fa-arrow-right"></i></a>
                     </div>
+                    
+                    <!-- Bloc features (pleine largeur) -->
+                    <div style="background: #f1f5f9; border-radius: 1rem; padding: 1rem; margin: 1.5rem 0 0 0;">
+                        <div style="font-weight: 700; margin-bottom: 0.8rem;">✨ Fonctionnalités clés :</div>
+                        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 0.5rem;">
+                            <div><i class="fas fa-check-circle" style="color:#10b981;"></i> Multi-commerçants</div>
+                            <div><i class="fas fa-check-circle" style="color:#10b981;"></i> Forfaits (Essai/Starter)</div>
+                            <div><i class="fas fa-check-circle" style="color:#10b981;"></i> Paiement Stripe</div>
+                            <div><i class="fas fa-check-circle" style="color:#10b981;"></i> Dashboard analytics</div>
+                            <div><i class="fas fa-check-circle" style="color:#10b981;"></i> QR code dynamique</div>
+                            <div><i class="fas fa-check-circle" style="color:#10b981;"></i> Scan ultra-rapide</div>
+                        </div>
+                    </div>
+                </div>
 
-<!-- Colonne droite : GALERIE AMÉLIORÉE (plus grande) -->
-<div class="project-gallery">
-    <div class="gallery-container" style="position: relative; background: #f1f5f9; border-radius: 1rem; overflow: hidden; box-shadow: 0 10px 25px -5px rgba(0,0,0,0.1);">
-        <div class="gallery-slides" id="gallerySlides">
-            <div class="gallery-slide active">
-                <img src="images/projets/fastfid/site-accueil.png" alt="Inscription" style="width: 100%; height: auto; display: block; max-height: 500px; object-fit: contain; background: #f8fafc;">
-                <div class="slide-caption" style="position: absolute; bottom: 0; left: 0; right: 0; background: linear-gradient(to top, rgba(0,0,0,0.85), transparent); color: white; padding: 1rem;"><strong>🏠 Inscription</strong> - Rejoignez le programme de fidélité</div>
-            </div>
-            <div class="gallery-slide">
-                <img src="images/projets/fastfid/login.png" alt="Connexion" style="width: 100%; height: auto; display: block; max-height: 500px; object-fit: contain; background: #f8fafc;">
-                <div class="slide-caption" style="position: absolute; bottom: 0; left: 0; right: 0; background: linear-gradient(to top, rgba(0,0,0,0.85), transparent); color: white; padding: 1rem;"><strong>🔐 Connexion</strong> - Accès sécurisé</div>
-            </div>
-            <div class="gallery-slide">
-                <img src="images/projets/fastfid/admin-main.png" alt="Dashboard" style="width: 100%; height: auto; display: block; max-height: 500px; object-fit: contain; background: #f8fafc;">
-                <div class="slide-caption" style="position: absolute; bottom: 0; left: 0; right: 0; background: linear-gradient(to top, rgba(0,0,0,0.85), transparent); color: white; padding: 1rem;"><strong>📊 Dashboard</strong> - Gérez vos clients</div>
-            </div>
-            <div class="gallery-slide">
-                <img src="images/projets/fastfid/admin-fidel.png" alt="Ajout points" style="width: 100%; height: auto; display: block; max-height: 500px; object-fit: contain; background: #f8fafc;">
-                <div class="slide-caption" style="position: absolute; bottom: 0; left: 0; right: 0; background: linear-gradient(to top, rgba(0,0,0,0.85), transparent); color: white; padding: 1rem;"><strong>⭐ Ajout points</strong> - Fidélisez vos clients</div>
-            </div>
-            <div class="gallery-slide">
-                <img src="images/projets/fastfid/lisyadmin_tenant.png" alt="Liste membres" style="width: 100%; height: auto; display: block; max-height: 500px; object-fit: contain; background: #f8fafc;" onerror="this.src='images/projets/fastfid/lisyçadmin_tenant.png'">
-                <div class="slide-caption" style="position: absolute; bottom: 0; left: 0; right: 0; background: linear-gradient(to top, rgba(0,0,0,0.85), transparent); color: white; padding: 1rem;"><strong>📋 Membres</strong> - Export et campagnes</div>
-            </div>
-            <div class="gallery-slide">
-                <img src="images/projets/fastfid/client-fidel.png" alt="Espace client" style="width: 100%; height: auto; display: block; max-height: 500px; object-fit: contain; background: #f8fafc;">
-                <div class="slide-caption" style="position: absolute; bottom: 0; left: 0; right: 0; background: linear-gradient(to top, rgba(0,0,0,0.85), transparent); color: white; padding: 1rem;"><strong>👤 Espace client</strong> - Points et historique</div>
-            </div>
-        </div>
-        
-        <!-- Boutons plus grands et plus visibles -->
-        <button class="gallery-nav prev" id="galleryPrev" style="position: absolute; top: 50%; left: 1rem; transform: translateY(-50%); background: rgba(0,0,0,0.7); color: white; border: none; width: 2.8rem; height: 2.8rem; border-radius: 50%; cursor: pointer; font-size: 1.5rem; display: flex; align-items: center; justify-content: center; transition: all 0.2s;">❮</button>
-        <button class="gallery-nav next" id="galleryNext" style="position: absolute; top: 50%; right: 1rem; transform: translateY(-50%); background: rgba(0,0,0,0.7); color: white; border: none; width: 2.8rem; height: 2.8rem; border-radius: 50%; cursor: pointer; font-size: 1.5rem; display: flex; align-items: center; justify-content: center; transition: all 0.2s;">❯</button>
-        
-        <div class="gallery-dots" id="galleryDots" style="position: absolute; bottom: 1rem; left: 50%; transform: translateX(-50%); display: flex; gap: 0.6rem; z-index: 5;"></div>
-    </div>
-    <div style="margin-top: 1rem; text-align: center;">
-        <a href="https://fastfid.com" target="_blank" style="display: inline-flex; align-items: center; gap: 0.5rem; background: linear-gradient(135deg, #667eea, #764ba2); color: white; padding: 0.7rem 1.8rem; border-radius: 2rem; text-decoration: none; font-weight: 500;">Explorer FastFid →</a>
-    </div>
-</div>
+                <!-- DEUXIÈME LIGNE : GALERIE PLEINE LARGEUR -->
+                <div style="padding: 1rem 2rem 2rem 2rem;">
+                    <h3 style="font-size: 1.3rem; margin-bottom: 1rem; color: #1e293b;">📸 Aperçu de l'application</h3>
+                    
+                    <div class="project-gallery">
+                        <div class="gallery-container" style="position: relative; background: #f1f5f9; border-radius: 1rem; overflow: hidden; box-shadow: 0 10px 25px -5px rgba(0,0,0,0.1);">
+                            <div class="gallery-slides" id="gallerySlides">
+                                <div class="gallery-slide active">
+                                    <img src="images/projets/fastfid/site-accueil.png" alt="Inscription" style="width: 100%; height: auto; display: block; background: #f8fafc;">
+                                    <div class="slide-caption" style="position: absolute; bottom: 0; left: 0; right: 0; background: linear-gradient(to top, rgba(0,0,0,0.85), transparent); color: white; padding: 1rem;"><strong>🏠 Inscription</strong> - Rejoignez le programme de fidélité</div>
+                                </div>
+                                <div class="gallery-slide">
+                                    <img src="images/projets/fastfid/login.png" alt="Connexion" style="width: 100%; height: auto; display: block; background: #f8fafc;">
+                                    <div class="slide-caption" style="position: absolute; bottom: 0; left: 0; right: 0; background: linear-gradient(to top, rgba(0,0,0,0.85), transparent); color: white; padding: 1rem;"><strong>🔐 Connexion</strong> - Accès sécurisé</div>
+                                </div>
+                                <div class="gallery-slide">
+                                    <img src="images/projets/fastfid/admin-main.png" alt="Dashboard" style="width: 100%; height: auto; display: block; background: #f8fafc;">
+                                    <div class="slide-caption" style="position: absolute; bottom: 0; left: 0; right: 0; background: linear-gradient(to top, rgba(0,0,0,0.85), transparent); color: white; padding: 1rem;"><strong>📊 Dashboard</strong> - Gérez vos clients</div>
+                                </div>
+                                <div class="gallery-slide">
+                                    <img src="images/projets/fastfid/admin-fidel.png" alt="Ajout points" style="width: 100%; height: auto; display: block; background: #f8fafc;">
+                                    <div class="slide-caption" style="position: absolute; bottom: 0; left: 0; right: 0; background: linear-gradient(to top, rgba(0,0,0,0.85), transparent); color: white; padding: 1rem;"><strong>⭐ Ajout points</strong> - Fidélisez vos clients</div>
+                                </div>
+                                <div class="gallery-slide">
+                                    <img src="images/projets/fastfid/lisyadmin_tenant.png" alt="Liste membres" style="width: 100%; height: auto; display: block; background: #f8fafc;" onerror="this.src='images/projets/fastfid/lisyçadmin_tenant.png'">
+                                    <div class="slide-caption" style="position: absolute; bottom: 0; left: 0; right: 0; background: linear-gradient(to top, rgba(0,0,0,0.85), transparent); color: white; padding: 1rem;"><strong>📋 Membres</strong> - Export et campagnes</div>
+                                </div>
+                                <div class="gallery-slide">
+                                    <img src="images/projets/fastfid/client-fidel.png" alt="Espace client" style="width: 100%; height: auto; display: block; background: #f8fafc;">
+                                    <div class="slide-caption" style="position: absolute; bottom: 0; left: 0; right: 0; background: linear-gradient(to top, rgba(0,0,0,0.85), transparent); color: white; padding: 1rem;"><strong>👤 Espace client</strong> - Points et historique</div>
+                                </div>
+                            </div>
+                            
+                            <!-- Boutons de navigation -->
+                            <button class="gallery-nav prev" id="galleryPrev" style="position: absolute; top: 50%; left: 1rem; transform: translateY(-50%); background: rgba(0,0,0,0.7); color: white; border: none; width: 3rem; height: 3rem; border-radius: 50%; cursor: pointer; font-size: 1.5rem; display: flex; align-items: center; justify-content: center; z-index: 10;">❮</button>
+                            <button class="gallery-nav next" id="galleryNext" style="position: absolute; top: 50%; right: 1rem; transform: translateY(-50%); background: rgba(0,0,0,0.7); color: white; border: none; width: 3rem; height: 3rem; border-radius: 50%; cursor: pointer; font-size: 1.5rem; display: flex; align-items: center; justify-content: center; z-index: 10;">❯</button>
+                            
+                            <!-- Dots -->
+                            <div class="gallery-dots" id="galleryDots" style="position: absolute; bottom: 1rem; left: 50%; transform: translateX(-50%); display: flex; gap: 0.6rem; z-index: 10;"></div>
+                        </div>
+                        
+                        <div style="margin-top: 1rem; text-align: center;">
+                            <a href="https://fastfid.com" target="_blank" style="display: inline-flex; align-items: center; gap: 0.5rem; background: linear-gradient(135deg, #667eea, #764ba2); color: white; padding: 0.7rem 1.8rem; border-radius: 2rem; text-decoration: none; font-weight: 500;">Explorer FastFid →</a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
