@@ -79,103 +79,87 @@
         </div>
     </section>
 
-    <!-- Projets Section - Version Améliorée Sans Images Manquantes -->
-    <section id="projets" class="projets">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-tag">Réalisations</span>
-                <h2 class="section-title">Projets <span class="highlight">phares</span></h2>
-                <p class="section-desc">Une solution SaaS innovante, conçue et développée de A à Z</p>
-            </div>
+<!-- Section Projets refondue - Sans images manquantes, avec cadre haut/bas -->
+<section id="projets" class="projets" style="background: linear-gradient(135deg, #f8fafc 0%, #ffffff 100%); border-top: 4px solid #667eea; border-bottom: 1px solid #e2e8f0;">
+    <div class="container">
+        <div class="section-header">
+            <span class="section-tag">⭐ Réalisation phare</span>
+            <h2 class="section-title">FastFid – SaaS de <span class="highlight">fidélisation client</span></h2>
+            <p class="section-desc">Une plateforme complète, de l'API au front-end, prête à être déployée</p>
+        </div>
 
-            <div class="project-showcase">
-                <div class="project-card">
-                    <!-- En-tête avec badges -->
-                    <div class="project-header-badges">
-                        <span class="project-badge saas">🚀 SaaS - En Production</span>
-                        <span class="project-badge stack">Laravel / MySQL</span>
-                    </div>
+        <div class="project-showcase">
+            <div class="project-card" style="background: white; border-radius: 1.5rem; box-shadow: 0 20px 35px -12px rgba(0,0,0,0.1); overflow: hidden;">
+                
+                <!-- En-tête badges -->
+                <div style="display: flex; gap: 0.75rem; padding: 1.5rem 2rem 0 2rem; flex-wrap: wrap;">
+                    <span style="background: linear-gradient(135deg, #667eea, #764ba2); color: white; padding: 0.3rem 1rem; border-radius: 2rem; font-size: 0.8rem; font-weight: 600;">🚀 SaaS - En production</span>
+                    <span style="background: #e2e8f0; color: #334155; padding: 0.3rem 1rem; border-radius: 2rem; font-size: 0.8rem; font-weight: 600;">Laravel / MySQL / Stripe</span>
+                </div>
 
-                    <div class="project-layout">
-                        <!-- Colonne Gauche : Description -->
-                        <div class="project-info">
-                            <h3>FastFid – Plateforme de <span class="saas-highlight">fidélisation 100% SaaS</span></h3>
-                            
-                            <div class="project-description">
-                                <p><strong>FastFid</strong> est une solution clé en main qui permet aux commerçants de lancer un programme de fidélité sans aucune installation. Gérez vos clients, attribuez des points via QR code, et analysez vos performances en temps réel.</p>
-                            </div>
-                            
-                            <!-- Features détaillées -->
-                            <div class="saas-features">
-                                <div class="saas-feature-title">
-                                    ✨ Fonctionnalités clés de l'application :
-                                </div>
-                                <div class="project-features-grid">
-                                    <div class="feature"><i class="fas fa-users"></i><span><strong>Multi-commerçants :</strong> Architecture tenant complète</span></div>
-                                    <div class="feature"><i class="fas fa-tags"></i><span><strong>Système de forfaits :</strong> Essai, Starter, Sur-mesure</span></div>
-                                    <div class="feature"><i class="fas fa-credit-card"></i><span><strong>Paiement intégré :</strong> Stripe (mensuel/annuel)</span></div>
-                                    <div class="feature"><i class="fas fa-chart-line"></i><span><strong>Analytics :</strong> Dashboard dédié par commerçant</span></div>
-                                    <div class="feature"><i class="fas fa-qrcode"></i><span><strong>QR Codes :</strong> Génération dynamique pour chaque client</span></div>
-                                    <div class="feature"><i class="fas fa-bolt"></i><span><strong>Expérience fluide :</strong> Scan ultra-rapide en caisse</span></div>
-                                </div>
-                            </div>
-                            
-                            <!-- Offres -->
-                            <div class="project-pricing">
-                                <div class="pricing-offer">
-                                    <i class="fas fa-flask"></i>
-                                    <div><strong>30 jours gratuits</strong><br>Forfait Essai</div>
-                                </div>
-                                <div class="pricing-offer">
-                                    <i class="fas fa-rocket"></i>
-                                    <div><strong>19€ / mois</strong><br>Starter</div>
-                                </div>
-                                <div class="pricing-offer">
-                                    <i class="fas fa-crown"></i>
-                                    <div><strong>Sur mesure</strong><br>Solution dédiée</div>
-                                </div>
-                            </div>
-
-                            <!-- Lien d'appel à l'action -->
-                            <div class="project-cta-inline">
-                                <a href="https://fastfid.com" target="_blank" class="btn-project">
-                                    👉 Découvrir le projet FastFid <i class="fas fa-arrow-right"></i>
-                                </a>
+                <!-- Contenu 2 colonnes -->
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; padding: 1.5rem 2rem 2rem 2rem;">
+                    
+                    <!-- Colonne gauche : description -->
+                    <div>
+                        <h3 style="font-size: 1.6rem; margin-bottom: 1rem;">Solution <span style="background: linear-gradient(135deg, #667eea, #764ba2); background-clip: text; -webkit-background-clip: text; -webkit-text-fill-color: transparent;">100% SaaS</span></h3>
+                        <p style="color: #334155; line-height: 1.5; margin-bottom: 1.2rem;">FastFid permet aux commerçants de lancer un programme de fidélité sans aucune installation. Gérez vos clients, attribuez des points via QR code, et analysez vos performances.</p>
+                        
+                        <!-- Bloc features -->
+                        <div style="background: #f1f5f9; border-radius: 1rem; padding: 1rem; margin-bottom: 1.2rem;">
+                            <div style="font-weight: 700; margin-bottom: 0.8rem;">✨ Fonctionnalités clés :</div>
+                            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 0.5rem;">
+                                <div style="display: flex; align-items: center; gap: 0.4rem;"><i class="fas fa-check-circle" style="color:#10b981;"></i> Multi-commerçants</div>
+                                <div style="display: flex; align-items: center; gap: 0.4rem;"><i class="fas fa-check-circle" style="color:#10b981;"></i> Forfaits (Essai/Starter)</div>
+                                <div style="display: flex; align-items: center; gap: 0.4rem;"><i class="fas fa-check-circle" style="color:#10b981;"></i> Paiement Stripe</div>
+                                <div style="display: flex; align-items: center; gap: 0.4rem;"><i class="fas fa-check-circle" style="color:#10b981;"></i> Dashboard analytics</div>
+                                <div style="display: flex; align-items: center; gap: 0.4rem;"><i class="fas fa-check-circle" style="color:#10b981;"></i> QR code dynamique</div>
+                                <div style="display: flex; align-items: center; gap: 0.4rem;"><i class="fas fa-check-circle" style="color:#10b981;"></i> Scan ultra-rapide</div>
                             </div>
                         </div>
 
-                        <!-- Colonne Droite : Aperçu Visuel (Remplacement de la galerie) -->
-                        <div class="project-preview">
-                            <div class="preview-card">
-                                <div class="preview-icon">
-                                    <i class="fas fa-qrcode"></i>
-                                </div>
-                                <h4>Interface Commerçant</h4>
-                                <div class="preview-list">
-                                    <div><i class="fas fa-check-circle"></i> Dashboard analytique</div>
-                                    <div><i class="fas fa-check-circle"></i> Gestion des clients</div>
-                                    <div><i class="fas fa-check-circle"></i> Scan & attribution de points</div>
-                                    <div><i class="fas fa-check-circle"></i> Campagnes de fidélisation</div>
-                                </div>
+                        <!-- Offres -->
+                        <div style="display: flex; gap: 1rem; margin-bottom: 1.5rem; flex-wrap: wrap;">
+                            <div style="flex: 1; background: white; border: 1px solid #cbd5e1; border-radius: 0.75rem; padding: 0.5rem 0.8rem; display: flex; align-items: center; gap: 0.6rem;"><i class="fas fa-flask" style="color:#667eea;"></i><div><strong>30 jours gratuits</strong><br>Forfait Essai</div></div>
+                            <div style="flex: 1; background: white; border: 1px solid #cbd5e1; border-radius: 0.75rem; padding: 0.5rem 0.8rem; display: flex; align-items: center; gap: 0.6rem;"><i class="fas fa-rocket" style="color:#667eea;"></i><div><strong>19€/mois</strong><br>Starter</div></div>
+                        </div>
+
+                        <!-- Bouton CTA -->
+                        <a href="https://fastfid.com" target="_blank" style="display: inline-flex; align-items: center; gap: 0.5rem; background: #0f172a; color: white; padding: 0.7rem 1.5rem; border-radius: 2rem; text-decoration: none; font-weight: 500; transition: all 0.2s;">👉 Découvrir FastFid <i class="fas fa-arrow-right"></i></a>
+                    </div>
+
+                    <!-- Colonne droite : miniatures fonctionnelles (remplace la galerie) -->
+                    <div>
+                        <div style="background: linear-gradient(145deg, #f8fafc, #ffffff); border-radius: 1rem; padding: 1rem; margin-bottom: 1rem; border: 1px solid #e2e8f0;">
+                            <div style="display: flex; align-items: center; gap: 0.8rem; margin-bottom: 1rem;">
+                                <i class="fas fa-chart-line" style="font-size: 1.8rem; color:#667eea;"></i>
+                                <h4 style="margin:0;">Dashboard commerçant</h4>
                             </div>
-                            <div class="preview-card">
-                                <div class="preview-icon">
-                                    <i class="fas fa-mobile-alt"></i>
-                                </div>
-                                <h4>Espace Client</h4>
-                                <div class="preview-list">
-                                    <div><i class="fas fa-check-circle"></i> Solde de points en direct</div>
-                                    <div><i class="fas fa-check-circle"></i> Historique des achats</div>
-                                    <div><i class="fas fa-check-circle"></i> QR code personnel</div>
-                                    <div><i class="fas fa-check-circle"></i> Bons d'achat générés</div>
-                                </div>
+                            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 0.5rem;">
+                                <div><i class="fas fa-chart-simple"></i> Chiffres clés</div>
+                                <div><i class="fas fa-users"></i> Liste clients</div>
+                                <div><i class="fas fa-qrcode"></i> Scanner QR</div>
+                                <div><i class="fas fa-chart-line"></i> Graphiques</div>
+                            </div>
+                        </div>
+                        <div style="background: linear-gradient(145deg, #f8fafc, #ffffff); border-radius: 1rem; padding: 1rem; border: 1px solid #e2e8f0;">
+                            <div style="display: flex; align-items: center; gap: 0.8rem; margin-bottom: 1rem;">
+                                <i class="fas fa-mobile-alt" style="font-size: 1.8rem; color:#764ba2;"></i>
+                                <h4 style="margin:0;">Espace client</h4>
+                            </div>
+                            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 0.5rem;">
+                                <div><i class="fas fa-coins"></i> Solde points</div>
+                                <div><i class="fas fa-history"></i> Historique</div>
+                                <div><i class="fas fa-qrcode"></i> QR code perso</div>
+                                <div><i class="fas fa-ticket"></i> Bons d'achat</div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
     <!-- Services Section - Ce que je peux réaliser -->
     <section id="services" class="services">
