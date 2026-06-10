@@ -58,17 +58,9 @@
                 </div>
                 <div class="hero-stats">
                     <div class="stat">
-						<span class="stat-number">10+</span>
-						<span class="stat-label">Années d'expérience</span>
+                        <span class="stat-number">10+</span>
+                        <span class="stat-label">Années d'expérience</span>
                     </div>
-                    <!-- <div class="stat">
-                        <span class="stat-number">20+</span>
-                        <span class="stat-label">Projets livrés</span>
-                    </div>
-                    <div class="stat">
-                        <span class="stat-number">100%</span>
-                        <span class="stat-label">Remote</span>
-                    </div> -->
                 </div>
             </div>
             <div class="hero-image">
@@ -79,7 +71,7 @@
         </div>
     </section>
 
-    <!-- Services Section - Ce que je peux réaliser -->
+    <!-- Services Section -->
     <section id="services" class="services">
         <div class="container">
             <div class="section-header">
@@ -104,7 +96,6 @@
                     </div>
                     <h3>API REST</h3>
                     <p>Création d'API robustes, documentées et sécurisées pour vos applications mobiles ou web.</p>
-                    <div class="service-tech">Laravel API · JWT · Sanctum · Swagger</div>
                 </div>
 
                 <div class="service-card">
@@ -126,9 +117,110 @@
                 </div>
             </div>
         </div>
-    </section> 
+    </section>
 
-    <!-- Expériences Section - Version verticale ligne par ligne -->
+    <!-- Projets Section - FastFid -->
+    <section id="projets" class="projects">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Réalisation phare</span>
+                <h2 class="section-title">Projet <span class="highlight">FastFid</span></h2>
+                <p class="section-desc">Plateforme multi-tenant de gestion de programme de fidélité pour restaurants</p>
+            </div>
+
+            <div class="project-showcase">
+                <div class="project-header">
+                    <span class="project-badge">SaaS | Multi-Tenant | Production</span>
+                    <h3 class="project-title">
+                        <a href="https://fastfid.com/" target="_blank">FastFid</a>
+                    </h3>
+                    <p class="project-description">
+                        Solution complète de fidélisation client destinée aux restaurateurs. Architecture multi-tenant permettant 
+                        à chaque restaurant de gérer son propre programme de fidélité (points, récompenses, campagnes SMS/email, 
+                        QR codes) avec un back-office super admin pour la gestion globale de la plateforme.
+                    </p>
+                    <div class="project-techs">
+                        <span>Laravel</span>
+                        <span>MySQL</span>
+                        <span>Stripe API</span>
+                        <span>Multi-Tenant</span>
+                        <span>QR Code API</span>
+                        <span>Cloudflare</span>
+                        <span>JavaScript</span>
+                    </div>
+                </div>
+
+                <!-- Galerie Carrousel -->
+                <div class="gallery-container">
+                    <div class="gallery-slides">
+                        <div class="gallery-slide active">
+                            <img src="images/projets/fastfid/accueil.png" alt="FastFid - Page d'accueil" class="clickable-img">
+                        </div>
+                        <div class="gallery-slide">
+                            <img src="images/projets/fastfid/inscription_restaurant.png" alt="FastFid - Inscription restaurant" class="clickable-img">
+                        </div>
+                        <div class="gallery-slide">
+                            <img src="images/projets/fastfid/tableaubord.png" alt="FastFid - Dashboard Super Admin" class="clickable-img">
+                        </div>
+                        <div class="gallery-slide">
+                            <img src="images/projets/fastfid/admin.png" alt="FastFid - Gestion restaurants" class="clickable-img">
+                        </div>
+                        <div class="gallery-slide">
+                            <img src="images/projets/fastfid/transaction.png" alt="FastFid - Historique transactions" class="clickable-img">
+                        </div>
+                        <div class="gallery-slide">
+                            <img src="images/projets/fastfid/Campagnes.png" alt="FastFid - Campagnes super admin" class="clickable-img">
+                        </div>
+                        <div class="gallery-slide">
+                            <img src="images/projets/fastfid/Listedesutilisateurs_client.png" alt="FastFid - Liste clients" class="clickable-img">
+                        </div>
+                        <div class="gallery-slide">
+                            <img src="images/projets/fastfid/editer_client.png" alt="FastFid - Fiche client" class="clickable-img">
+                        </div>
+                        <div class="gallery-slide">
+                            <img src="images/projets/fastfid/creation_campagne.png" alt="FastFid - Création campagne" class="clickable-img">
+                        </div>
+                        <div class="gallery-slide">
+                            <img src="images/projets/fastfid/login.png" alt="FastFid - Connexion client" class="clickable-img">
+                        </div>
+                        <div class="gallery-slide">
+                            <img src="images/projets/fastfid/ajout_admin.png" alt="FastFid - Ajout points" class="clickable-img">
+                        </div>
+                        <div class="gallery-slide">
+                            <img src="images/projets/fastfid/config.png" alt="FastFid - Configuration" class="clickable-img">
+                        </div>
+                    </div>
+                    <button class="gallery-btn gallery-prev" id="galleryPrev"><i class="fas fa-chevron-left"></i></button>
+                    <button class="gallery-btn gallery-next" id="galleryNext"><i class="fas fa-chevron-right"></i></button>
+                    <div class="gallery-dots" id="galleryDots"></div>
+                </div>
+
+                <!-- Fonctionnalités clés -->
+                <div class="features-list">
+                    <div class="feature-item"><i class="fas fa-building"></i> Architecture Multi-Tenant</div>
+                    <div class="feature-item"><i class="fas fa-credit-card"></i> Paiements Stripe / Virement</div>
+                    <div class="feature-item"><i class="fas fa-qrcode"></i> QR Codes personnalisés</div>
+                    <div class="feature-item"><i class="fas fa-envelope"></i> Campagnes SMS / Email</div>
+                    <div class="feature-item"><i class="fas fa-chart-line"></i> Dashboard analytics</div>
+                    <div class="feature-item"><i class="fas fa-trophy"></i> Système de points/récompenses</div>
+                    <div class="feature-item"><i class="fas fa-users"></i> Gestion rôles (Admin/SuperAdmin)</div>
+                    <div class="feature-item"><i class="fas fa-history"></i> Logs & audit complet</div>
+                </div>
+
+                <!-- Liens -->
+                <div class="project-footer">
+                    <a href="https://fastfid.com/" target="_blank" class="project-link project-link-primary">
+                        <i class="fas fa-external-link-alt"></i> Voir le site en production
+                    </a>
+                    <a href="https://github.com/mana-andria-dev/fastfid" target="_blank" class="project-link project-link-secondary">
+                        <i class="fab fa-github"></i> Code source (sur demande)
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Expériences Section -->
     <section id="experiences" class="experiences">
         <div class="container">
             <div class="section-header">
@@ -153,7 +245,7 @@
                             <h3>Développeur Full Stack Senior</h3>
                             <span class="remote-badge">Remote CDI</span>
                         </div>
-                        <h4> <a href="https://dredd.fr/">Dredd.fr</a></h4>
+                        <h4><a href="https://dredd.fr/">Dredd.fr</a></h4>
                         <ul class="achievements">
                             <li>Création et maintenance d'applications avec Laravel, CodeIgniter et frameworks JS</li>
                             <li>Développement de plugins sur mesure Magento 2, WordPress et PrestaShop</li>
@@ -288,10 +380,6 @@
                             <span>CodeIgniter</span>
                             <div class="skill-bar"><div class="skill-progress" style="width: 85%"></div></div>
                         </div>
-                        <!-- <div class="skill-item">
-                            <span>Magento 2</span>
-                            <div class="skill-bar"><div class="skill-progress" style="width: 80%"></div></div>
-                        </div> -->
                     </div>
                 </div>
 
@@ -402,43 +490,49 @@
         </div>
     </section>
 
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Me contacter</span>
+                <h2 class="section-title">Parlons de votre <span class="highlight">projet</span></h2>
+                <p class="section-desc">Disponible pour des missions en remote ou sur site</p>
+            </div>
 
-	<!-- Contact Section - 3 colonnes centrées -->
-	<section id="contact" class="contact">
-	    <div class="container">
-	        <div class="section-header">
-	            <span class="section-tag">Me contacter</span>
-	            <h2 class="section-title">Parlons de votre <span class="highlight">projet</span></h2>
-	            <p class="section-desc">Disponible pour des missions en remote ou sur site</p>
-	        </div>
+            <div class="contact-grid">
+                <div class="contact-card">
+                    <div class="contact-icon">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <h4>Email</h4>
+                    <p><a href="mailto:rmana91@gmail.com">rmana91@gmail.com</a></p>
+                </div>
 
-	        <div class="contact-grid">
-	            <div class="contact-card">
-	                <div class="contact-icon">
-	                    <i class="fas fa-envelope"></i>
-	                </div>
-	                <h4>Email</h4>
-	                <p><a href="mailto:rmana91@gmail.com">rmana91@gmail.com</a></p>
-	            </div>
+                <div class="contact-card">
+                    <div class="contact-icon">
+                        <i class="fab fa-github"></i>
+                    </div>
+                    <h4>GitHub</h4>
+                    <p><a href="https://github.com/mana-andria-dev" target="_blank">mana-andria-dev</a></p>
+                </div>
 
-	            <div class="contact-card">
-	                <div class="contact-icon">
-	                    <i class="fab fa-github"></i>
-	                </div>
-	                <h4>GitHub</h4>
-	                <p><a href="https://github.com/mana-andria-dev" target="_blank">mana-andria-dev</a></p>
-	            </div>
+                <div class="contact-card">
+                    <div class="contact-icon">
+                        <i class="fas fa-phone"></i>
+                    </div>
+                    <h4>Téléphone</h4>
+                    <p><a href="tel:+261389777090">+261 38 97 770 90</a></p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-	            <div class="contact-card">
-	                <div class="contact-icon">
-	                    <i class="fas fa-phone"></i>
-	                </div>
-	                <h4>Téléphone</h4>
-	                <p><a href="tel:+261389777090">+261 38 97 770 90</a></p>
-	            </div>
-	        </div>
-	    </div>
-	</section>
+    <!-- Modal pour zoom images -->
+    <div id="imageModal" class="modal">
+        <span class="modal-close">&times;</span>
+        <img class="modal-content" id="modalImage">
+        <div id="modalCaption"></div>
+    </div>
 
     <footer class="footer">
         <div class="container">
