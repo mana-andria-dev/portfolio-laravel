@@ -16,6 +16,13 @@
     box-sizing: border-box;
 }
 
+.project-divider {
+    height: 2px;
+    background: linear-gradient(to right, transparent, var(--primary-color), transparent);
+    margin: 4rem 0;
+    opacity: 0.3;
+}
+
 html {
     scroll-behavior: smooth;
 }
